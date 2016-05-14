@@ -25,15 +25,24 @@ def create_board(first='azul'):
     board['first'] = first.upper()
     count_dict[colors[first]] += 1
     count = 1
+    #agregando mas randomize a la posicion del negro
+    used_numbers = []
     for word in words:
         while 1:
             color = random.randint(0,3)
             if count_dict.get(color):
-                board['c'+str(count)] = 'color' + str(color)
-                board['v'+str(count)] = word
+                while 1:
+                    idx = random.randint(1,25)
+                    if idx not in used_numbers:
+                        used_numbers.append(idx)
+                        break
+
+                board['c'+str(idx)] = 'color' + str(color)
+                board['v'+str(idx)] = word
                 count += 1
                 count_dict[color] -= 1
                 break
+
     return board
 
 if __name__ == "__main__":
