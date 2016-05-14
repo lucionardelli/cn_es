@@ -3,6 +3,10 @@ td {
     font-size:30px!important;
 }
 
+.hide {
+    visibility:hidden;
+}
+
 td {
     cursor:pointer;
 }
