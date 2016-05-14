@@ -3,6 +3,14 @@ td {
     font-size:30px!important;
 }
 
+body.rojo{
+  background-color:#FF7575;
+}
+
+body.azul{
+  background-color:#7BA7E1;
+}
+
 .hide {
     visibility:hidden;
 }
